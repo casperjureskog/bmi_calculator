@@ -3,7 +3,6 @@ angular.module('starter.controllers', [])
 .controller('AboutController', function () {
 
 })
-
 .controller('BmiController', function($scope) {
   $scope.data = {};
   $scope.calculateBMI = function() {
@@ -11,7 +10,12 @@ angular.module('starter.controllers', [])
       weight: $scope.data.weight,
       height: $scope.data.height
     });
-    person.calculate_bmi_met();
-    $scope.person = person;
+  if ( $scope.data.unit == "calculate_bmi_met"){
+      person.calculate_bmi_met();
+      $scope.person = person;
+    } else {
+      person.calculate_bmi_imp();
+      $scope.person = person;
+    }
   };
 });
