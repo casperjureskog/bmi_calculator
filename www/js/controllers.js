@@ -1,7 +1,9 @@
 angular.module('starter.controllers', [])
+
 .controller('AboutController', function () {
 
 })
+
 .controller('BmiController', function($scope) {
   $scope.data = {};
   $scope.calculateBMI = function() {
