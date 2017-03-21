@@ -9,9 +9,7 @@
           <label class="item item-input">
             <input type="number" class="item item-input" placeholder="Height" ng-model="data.height">
           </label>
-          Type:
-           <label><input type="radio" ng-model="data.unit" value="calculate_bmi_met" />metric</label>
-           <label><input type="radio" ng-model="data.unit" value="calculate_bmi_imp" />imperial</label>
+          <ion-toggle ng-model="data.unit" toggle-class="toggle-calm">imperial</ion-toggle>
           <button class="button button-full button-calm" ng-click="calculateBMI()">Calculate</button>
           <div class="card" ng-if="person">
             <div class="item item-divider">

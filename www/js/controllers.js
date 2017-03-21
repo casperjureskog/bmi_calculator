@@ -10,7 +10,7 @@ angular.module('starter.controllers', [])
       weight: $scope.data.weight,
       height: $scope.data.height
     });
-  if ( $scope.data.unit == "calculate_bmi_met"){
+  if ( $scope.data.unit == true){
       person.calculate_bmi_met();
       $scope.person = person;
     } else {
